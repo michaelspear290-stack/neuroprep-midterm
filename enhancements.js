@@ -321,7 +321,8 @@
       }
       if(q.stem.includes('The leading hypothesis concerns ')){
         const start=(vignettes[q.topic]||'A patient undergoes focused neurologic examination and complementary testing.');
-        q.stem=start+' A particular disease mechanism must be distinguished from closely related alternatives. Which additional observation would most strongly establish the correct mechanism or localization?';
+        const clue=String(q.keyTakeaway||q.explanation||'').replace(/\.$/,'');
+        q.stem=start+' An associated mechanism is described by the following observation: '+clue+'. Which additional result or clinical manifestation would most strongly support the same mechanism?';
       }
     }else{
       q.stem=q.stem.replace(/Which localization, mechanism, or structure best explains the presentation\?$/,(
@@ -429,11 +430,17 @@
     for(let i=out.length-1;i>0;i--){s=(Math.imul(s,1664525)+1013904223)>>>0;const j=s%(i+1);[out[i],out[j]]=[out[j],out[i]];}
     return out;
   }
-  const migrations={};
+  const migrations={},previousInverse={};
   for(const q of questions){
     const old=q.options.map((value,i)=>({value,letter:letters[i],why:q.optionRationales?.[letters[i]]||''}));
     const chosen=old.find(x=>x.letter===q.answer);if(!chosen||old.length!==5)continue;
-    const target=(q.id*7+Math.floor(q.id/6)*3)%5;
+    const block=Math.floor((q.id-1)/5);
+    const target=permute(0x21ed59+block*1709,[0,1,2,3,4])[(q.id-1)%5];
+    const previousTarget=(q.id*7+Math.floor(q.id/6)*3)%5;
+    const previousWrong=permute(q.id*827+1543,old.filter(x=>x!==chosen));
+    const previousItems=[];let previousI=0;
+    for(let i=0;i<5;i++)previousItems.push(i===previousTarget?chosen:previousWrong[previousI++]);
+    previousInverse[q.id]=Object.fromEntries(previousItems.map((x,i)=>[letters[i],x.letter]));
     const wrong=permute(q.id*827+1543,old.filter(x=>x!==chosen));
     const fresh=[];let k=0;for(let i=0;i<5;i++)fresh.push(i===target?chosen:wrong[k++]);
     const map={};fresh.forEach((x,i)=>{map[x.letter]=letters[i]});
@@ -443,16 +450,18 @@
   }
   try{
     const versionKey='neuroprep-choice-order-v3';
-    if(localStorage.getItem(versionKey)!=='stable-2026-11'){
+    const storedVersion=localStorage.getItem(versionKey);
+    if(storedVersion!=='balanced-2026-11'){ 
       const stateKey='neuroprep-midterm-v1';
       const prior=JSON.parse(localStorage.getItem(stateKey)||'null');
       if(prior){
-        const remap=(obj)=>{if(!obj||typeof obj!=='object')return;for(const id of Object.keys(obj)){const map=migrations[id];if(map&&typeof obj[id]==='string')obj[id]=map[obj[id]]||obj[id];}};
+        const migrateLetter=(id,letter)=>{const original=storedVersion==='stable-2026-11'?(previousInverse[id]?.[letter]||letter):letter;return migrations[id]?.[original]||letter;};
+        const remap=(obj)=>{if(!obj||typeof obj!=='object')return;for(const id of Object.keys(obj)){if(typeof obj[id]==='string')obj[id]=migrateLetter(id,obj[id]);}};
         for(const h of prior.history||[]){remap(h.answers);let score=0;for(const id of h.ids||[]){const q=questions.find(x=>x.id===Number(id));if(q&&h.answers?.[id]===q.answer)score++}h.correct=score;}
-        if(prior.active){remap(prior.active.answers);for(const [id,arr] of Object.entries(prior.active.crossouts||{}))if(Array.isArray(arr))prior.active.crossouts[id]=arr.map(x=>migrations[id]?.[x]||x);}
+        if(prior.active){remap(prior.active.answers);for(const [id,arr] of Object.entries(prior.active.crossouts||{}))if(Array.isArray(arr))prior.active.crossouts[id]=arr.map(x=>migrateLetter(id,x));}
         localStorage.setItem(stateKey,JSON.stringify(prior));
       }
-      localStorage.setItem(versionKey,'stable-2026-11');
+      localStorage.setItem(versionKey,'balanced-2026-11');
     }
   }catch(e){console.warn('Saved choice-order migration could not complete',e);}
 
@@ -469,7 +478,7 @@
     '.midterm-deepdive h4{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--mint);margin:0 0 9px}',
     '.midterm-deepdive p{font-size:13.2px;line-height:1.7;margin:6px 0 10px;color:var(--ink)}',
     '.np-toolbox{display:flex;gap:7px;align-items:center;flex-wrap:wrap}',
-    '.np-tool{border:1px solid var(--border);border-radius:9px;padding:6px 10px;background:var(--card-2);color:var(--ink);font:700 11.5px/1.5 inherit;white-space:nowrap}',
+    '.np-tool{border:1px solid var(--border);border-radius:9px;padding:6px 10px;background:var(--card-2);color:var(--ink);font-size:11.5px;font-weight:700;line-height:1.5;white-space:nowrap}',
     '.np-tool:hover{border-color:var(--mint)}',
     '.np-hintbox{border:1px dashed var(--strong-border);border-radius:12px;background:var(--soft);padding:11px 14px;margin:0 0 14px;font-size:12.5px;line-height:1.7;color:var(--muted)}',
     '.np-modal{position:fixed;inset:0;z-index:90;background:rgba(4,11,24,.84);display:grid;place-items:center;padding:16px}',
@@ -482,7 +491,7 @@
     'body.np-focus .rail{display:none!important}body.np-focus .session-grid{grid-template-columns:minmax(0,1fr)!important}',
     'body.np-focus .question-card{max-width:880px;margin:0 auto}',
     '.np-session-meta{font-size:11px;color:var(--muted);margin-top:6px}',
-    '@media(max-width:540px){.q-stem{font-size:14.5px!important;line-height:1.62!important}.option{font-size:12.8px!important;padding:11px 10px!important}.crossout-btn{flex-basis:32px!important}.question-card{padding:16px 12px!important}.np-tool{font-size:10.5px;padding:6px 8px}.np-game{padding:17px}}'
+    '@media(max-width:540px){.topline{flex-wrap:wrap}.top-meta{width:100%;justify-content:flex-end;flex-wrap:wrap}.q-stem{font-size:14.5px!important;line-height:1.62!important}.option{font-size:12.8px!important;padding:11px 10px!important}.crossout-btn{flex-basis:32px!important}.question-card{padding:16px 12px!important}.np-tool{font-size:10.5px;padding:6px 8px}.np-game{padding:17px}}'
   ].join('\n');
   document.head.appendChild(uiStyle);
 
@@ -531,7 +540,18 @@
         meta.insertBefore(focus,meta.firstChild);
       }
     }
+    const cta=app.querySelector('.hero .cta-row');
+    if(cta&&!cta.querySelector('[data-np="hard40"]')){
+      const b=document.createElement('button');b.type='button';b.className='btn primary';
+      b.dataset.np='hard40';b.textContent='🧠 Start 40 hard clinical cases';
+      cta.appendChild(b);
+    }
     const card=app.querySelector('.question-card');
+    if(card&&!card.querySelector('.np-quality-tag')){
+      const num=Number(card.querySelector('.q-num')?.textContent.match(/\d+/)?.[0]);
+      const q=questions.find(x=>x.id===num);
+      if(q){const label=document.createElement('span');label.className='tag np-quality-tag';label.textContent=q.isCuratedClinical?'✓ Authored clinical case':'Concept reinforcement';card.querySelector('.q-meta')?.appendChild(label);}
+    }
     if(card&&!card.querySelector('[data-np="hint"]')){
       const num=card.querySelector('.q-num')?.textContent||'';
       const q=questions.find(x=>x.id===Number(num.match(/\d+/)?.[0]||-1));
@@ -552,7 +572,7 @@
       if(!q)return;
       const el=document.createElement('section');el.className='midterm-deepdive';
       const header=document.createElement('h4');header.textContent='Midterm must-know · '+q.topic;el.appendChild(header);
-      (q.midtermDeepDive||[]).forEach((v,i)=>{const p=document.createElement('p');p.textContent=(i===0?'Mechanism: ':'Exam discriminator: ')+v;el.appendChild(p)});
+      (q.isCuratedClinical?(q.midtermDeepDive||[]):(q.midtermDeepDive||[]).slice(1)).forEach((v,i)=>{const p=document.createElement('p');p.textContent=(i===0&&q.isCuratedClinical?'Mechanism: ':'Exam discriminator: ')+v;el.appendChild(p)});
       node.appendChild(el);
     });
   }
@@ -560,6 +580,19 @@
   document.addEventListener('click',event=>{
     const btn=event.target.closest('[data-np]');if(!btn)return;
     const action=btn.dataset.np;
+    if(action==='hard40'){
+      try{
+        const key='neuroprep-midterm-v1';
+        const state=JSON.parse(localStorage.getItem(key)||'{}');
+        if(state.active&&!confirm('Replace your current unfinished session with a 40-question hard clinical drill?'))return;
+        const ids=permute(Date.now(),questions.filter(q=>q.isCuratedClinical).map(q=>q.id)).slice(0,40);
+        state.active={ids,mode:'study',timed:false,minutes:120,answers:{},verified:{},crossouts:{},flags:[],index:0,startedAt:Date.now()};
+        state.screen='quiz';
+        localStorage.setItem(key,JSON.stringify(state));
+        window.location.reload();
+      }catch(e){alert('Could not start clinical drill; check browser storage.');}
+      return;
+    }
     if(action==='sprint'){openSprint();return;}
     if(action==='focus'){document.body.classList.toggle('np-focus');const active=document.body.classList.contains('np-focus');try{localStorage.setItem('neuroprep-focus-mode',active?'yes':'no')}catch(e){};btn.textContent=active?'◎ Exit focus':'◎ Focus';return;}
     if(action==='hint'){const box=btn.parentElement.nextElementSibling;if(box){box.hidden=!box.hidden;btn.setAttribute('aria-expanded',String(!box.hidden))}return;}
@@ -573,7 +606,7 @@
     enhanceScreen();
     const host=document.getElementById('app');if(host)new MutationObserver(()=>enhanceScreen()).observe(host,{childList:true,subtree:false});
   });
-  window.NEUROPREP_REFINED_VERSION='2026-11-04-clinical-v3';
+  window.NEUROPREP_REFINED_VERSION='2026-11-04-clinical-v3.1';
   window.NEUROPREP_CURATED_CASES=100+caseSet.length;
   window.NEUROPREP_REPAIRED_STEMS=repaired;
 
