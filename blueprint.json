@@ -14,7 +14,7 @@
   "lecture_topics": [
     {
       "topic": "Action Potentials",
-      "week": 1,
+      "week": 3,
       "kind": "lecture",
       "questions": 2
     },
@@ -278,5 +278,6 @@
       "kind": "practical",
       "questions": 3
     }
-  ]
+  ],
+  "content_revision": "2026-11-03 — source-verified Week 3 action potential lecture; clinical rationale and cross-out refinements in enhancements.js"
 }
