@@ -1,0 +1,282 @@
+{
+  "source": "NS_Exam_1_Breakdown_STUDENT_2026.pdf",
+  "exam_questions": 92,
+  "lecture_count": 77,
+  "practical_count": 15,
+  "difficulty_per_exam": {
+    "1": 34,
+    "2": 45,
+    "3": 13
+  },
+  "difficulty_note": "Official document supplies only the overall 34/45/13 totals; practice slot difficulty assignment is not official or psychometrically calibrated.",
+  "bank_size": 644,
+  "variants_per_slot": 7,
+  "lecture_topics": [
+    {
+      "topic": "Action Potentials",
+      "week": 1,
+      "kind": "lecture",
+      "questions": 2
+    },
+    {
+      "topic": "Aging and Neurodegenerative Disorders",
+      "week": 3,
+      "kind": "lecture",
+      "questions": 3
+    },
+    {
+      "topic": "Antiepileptics",
+      "week": 3,
+      "kind": "lecture",
+      "questions": 2
+    },
+    {
+      "topic": "Autonomics",
+      "week": 3,
+      "kind": "lecture",
+      "questions": 2
+    },
+    {
+      "topic": "Axon Repair",
+      "week": 2,
+      "kind": "lecture",
+      "questions": 1
+    },
+    {
+      "topic": "Cauda Equina and Conus Medullaris",
+      "week": 2,
+      "kind": "lecture",
+      "questions": 1
+    },
+    {
+      "topic": "Corticospinal and UMN/LMN",
+      "week": 2,
+      "kind": "lecture",
+      "questions": 2
+    },
+    {
+      "topic": "Cranial Nerve Reflexes",
+      "week": 2,
+      "kind": "lecture",
+      "questions": 1
+    },
+    {
+      "topic": "Cranial Nerves Module",
+      "week": 1,
+      "kind": "lecture",
+      "questions": 4
+    },
+    {
+      "topic": "Embryological Disorders of CNS/PNS",
+      "week": 1,
+      "kind": "lecture",
+      "questions": 1
+    },
+    {
+      "topic": "Embryology of CNS/PNS",
+      "week": 1,
+      "kind": "lecture",
+      "questions": 1
+    },
+    {
+      "topic": "Face Anatomy",
+      "week": 1,
+      "kind": "lecture",
+      "questions": 3
+    },
+    {
+      "topic": "Facial Embryology",
+      "week": 1,
+      "kind": "lecture",
+      "questions": 3
+    },
+    {
+      "topic": "Headaches",
+      "week": 2,
+      "kind": "lecture",
+      "questions": 3
+    },
+    {
+      "topic": "Histology Lab",
+      "week": 1,
+      "kind": "lecture",
+      "questions": 3
+    },
+    {
+      "topic": "Histology of CNS 1",
+      "week": 1,
+      "kind": "lecture",
+      "questions": 2
+    },
+    {
+      "topic": "Histology of CNS 2",
+      "week": 1,
+      "kind": "lecture",
+      "questions": 1
+    },
+    {
+      "topic": "Hypothalamus",
+      "week": 3,
+      "kind": "lecture",
+      "questions": 2
+    },
+    {
+      "topic": "Imaging Techniques",
+      "week": 1,
+      "kind": "lecture",
+      "questions": 1
+    },
+    {
+      "topic": "Increased Intracranial Pressure",
+      "week": 1,
+      "kind": "lecture",
+      "questions": 1
+    },
+    {
+      "topic": "Limbic System",
+      "week": 3,
+      "kind": "lecture",
+      "questions": 2
+    },
+    {
+      "topic": "Memory Formation",
+      "week": 3,
+      "kind": "lecture",
+      "questions": 4
+    },
+    {
+      "topic": "Multiple Sclerosis",
+      "week": 2,
+      "kind": "lecture",
+      "questions": 2
+    },
+    {
+      "topic": "Neck Anatomy",
+      "week": 1,
+      "kind": "lecture",
+      "questions": 3
+    },
+    {
+      "topic": "Neuroimaging Tutorial",
+      "week": 1,
+      "kind": "lecture",
+      "questions": 1
+    },
+    {
+      "topic": "Neuropathology Lab",
+      "week": 3,
+      "kind": "lecture",
+      "questions": 2
+    },
+    {
+      "topic": "Neuropathology of Neurodegenerative Diseases Lecture",
+      "week": 3,
+      "kind": "lecture",
+      "questions": 1
+    },
+    {
+      "topic": "Pain and Pain Pathways",
+      "week": 2,
+      "kind": "lecture",
+      "questions": 2
+    },
+    {
+      "topic": "Pain Medications",
+      "week": 2,
+      "kind": "lecture",
+      "questions": 2
+    },
+    {
+      "topic": "Peripheral Neuropathies",
+      "week": 2,
+      "kind": "lecture",
+      "questions": 3
+    },
+    {
+      "topic": "Protecting the Brain",
+      "week": 1,
+      "kind": "lecture",
+      "questions": 3
+    },
+    {
+      "topic": "Radiculopathy",
+      "week": 2,
+      "kind": "lecture",
+      "questions": 1
+    },
+    {
+      "topic": "Seizures and Epilepsy",
+      "week": 3,
+      "kind": "lecture",
+      "questions": 2
+    },
+    {
+      "topic": "Somatosensory Receptors and Tracts",
+      "week": 2,
+      "kind": "lecture",
+      "questions": 2
+    },
+    {
+      "topic": "Spinal Cord",
+      "week": 2,
+      "kind": "lecture",
+      "questions": 2
+    },
+    {
+      "topic": "Spinal Cord Cross-Sectional Anatomy",
+      "week": 2,
+      "kind": "lecture",
+      "questions": 1
+    },
+    {
+      "topic": "Spinal Syndromes",
+      "week": 2,
+      "kind": "lecture",
+      "questions": 2
+    },
+    {
+      "topic": "Synaptic Transmission and Neurotransmitters",
+      "week": 3,
+      "kind": "lecture",
+      "questions": 3
+    }
+  ],
+  "practical_topics": [
+    {
+      "topic": "Gross Anatomy Lab · Face",
+      "week": 1,
+      "kind": "practical",
+      "questions": 3
+    },
+    {
+      "topic": "Gross Anatomy Lab · Neck",
+      "week": 1,
+      "kind": "practical",
+      "questions": 1
+    },
+    {
+      "topic": "Gross Anatomy Lab · External CNS",
+      "week": 3,
+      "kind": "practical",
+      "questions": 4
+    },
+    {
+      "topic": "Gross Anatomy Lab · Internal CNS",
+      "week": 3,
+      "kind": "practical",
+      "questions": 2
+    },
+    {
+      "topic": "Gross Anatomy Lab · Limbic and cross-section",
+      "week": 3,
+      "kind": "practical",
+      "questions": 2
+    },
+    {
+      "topic": "Gross Anatomy Lab · Brainstem, BG, Cerebellum",
+      "week": 3,
+      "kind": "practical",
+      "questions": 3
+    }
+  ]
+}
