@@ -149,7 +149,7 @@
       if(m){
         const concept=m[1],context=vignettes[q.topic]||'A patient with a focal neurologic problem is discussed at a teaching conference. The team reviews mechanisms that could cause superficially similar findings.';
         const prompt=focusedQuestion[q.topic]||'Which finding most specifically supports this proposed mechanism or localization?';
-        q.stem=context+' The leading hypothesis concerns '+concept.charAt(0).toLowerCase()+concept.slice(1)+'. '+prompt;
+        q.stem=context+' The leading hypothesis concerns '+concept+'. '+prompt;
       }
     }else{
       q.stem=q.stem.replace('Which localization, mechanism, or structure best explains the presentation?',
