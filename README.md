@@ -17,7 +17,7 @@ Interactive medical-school practice website aligned with the University of Arizo
 
 ## Content and files
 
-- `index.html` is the **self-contained deployed site**, with embedded code, question bank, and images. No build or dependencies required.
+- `index.html` contains the deployed interface, embedded question bank and anatomy figures. It loads `enhancements.js` for editorial improvements, and no build system is required.
 - `questions.json` is the **editable master question snapshot**.
 - `blueprint.json` documents the per-lecture and per-practical quotas and difficulty totals.
 - To change site questions, the embedded question bank in `index.html` must also be rebuilt or updated. Editing only `questions.json` does **not** change the live site.
@@ -27,3 +27,14 @@ New practice items are independently authored from curated clinical concepts and
 ## Privacy and copyright
 
 Progress is saved to your own browser using the original `neuroprep-midterm-v1` storage key, maintaining existing history and bookmarks. No data is sent to a backend. The site contains anatomy images extracted from provided lecture materials that may include third-party illustrations: **confirm public redistribution rights, or remove/replace those images.**
+
+## November 2026 clinical review improvements
+
+- The original **100 case-based medical school questions** now have a dedicated study launch button.
+- The full **92-question blueprint simulation** prioritizes original clinical cases not yet completed, then explores unused variants. The 77 lecture/15 practical and 34/45/13 difficulty totals remain unchanged.
+- Reviewed questions display **rationales for each of the five answer choices**, a clinical reasoning summary, key takeaway and lecture-objective focus (paraphrased).
+- Strike-out buttons beside answers eliminate choices visually; tap again to restore. Keyboard **Shift + 1–5** eliminates/restores and **1–5** selects.
+- Existing generated stems have been converted to clinical context prompts while retaining their original test concepts and keyed answers. These are practice aids, **not faculty-authored or validated exam items**.
+- Corrected the **Action Potentials lecture to Week 3**, as stated in supplied lecture PDFs.
+- The deployed `index.html` loads `enhancements.js` from the repository root. Both files must be present.
+- `questions.json` remains the baseline editable question snapshot; the live editorial refinements are implemented in `enhancements.js`.
