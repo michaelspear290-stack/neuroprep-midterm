@@ -948,7 +948,17 @@
     const q=game.items[game.index];
     pane.innerHTML='<p class="np-session-meta">Quick question '+(game.index+1)+' of '+game.items.length+' · '+game.score+' correct</p><h2 style="font-size:18px">'+q[0]+'</h2>'+q[1].map((o,i)=>'<button type="button" class="np-choice '+(game.answered?(i===q[2]?'np-right':(i===game.choice?'np-wrong':'')):'')+'" data-np="sprint-answer" data-index="'+i+'" '+(game.answered?'disabled':'')+'>'+String.fromCharCode(65+i)+'. '+o+'</button>').join('')+(game.answered?'<p>'+q[3]+'</p><button type="button" class="btn primary" data-np="sprint-next">Next →</button>':'');
   }
+  function installNeuroHubNav(){
+    if(document.getElementById('np-unified-nav'))return;
+    const st=document.createElement('style');st.id='np-unified-nav-styles';
+    st.textContent='#np-unified-nav{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;position:relative;z-index:9;padding:10px max(18px,calc((100% - 1100px)/2));background:#18243a;color:#eff4ff;border-bottom:1px solid #384b6b;font:600 13px system-ui,sans-serif}#np-unified-nav .np-unified-logo{font-weight:850;letter-spacing:-.02em}#np-unified-nav .np-unified-links{display:flex;align-items:center;gap:8px;flex-wrap:wrap}#np-unified-nav a{display:inline-block;border:1px solid #465a7b;color:#e8efff;border-radius:8px;padding:7px 11px;text-decoration:none;font:600 13px system-ui,sans-serif}#np-unified-nav a:hover{background:#2c4268}#np-unified-nav .np-unified-current{background:#294574}';
+    document.head.appendChild(st);
+    const nav=document.createElement('div');nav.id='np-unified-nav';nav.setAttribute('role','navigation');nav.setAttribute('aria-label','NeuroPrep exam switcher');
+    nav.innerHTML='<span class="np-unified-logo">🧠 NeuroPrep · Nervous System</span><span class="np-unified-links"><a href="./" target="_top">All exams</a><a class="np-unified-current" aria-current="page" href="./midterm1.html" target="_top">Midterm 1</a><a href="./midterm2.html" target="_top">Midterm 2</a></span>';
+    document.body.insertBefore(nav,document.body.firstChild);
+  }
   function enhanceScreen(){
+    installNeuroHubNav();
     const app=document.getElementById('app');if(!app)return;
     if(!app.querySelector('[data-np="sprint"]')){
       const meta=app.querySelector('.top-meta');
