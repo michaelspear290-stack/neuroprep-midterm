@@ -1,5 +1,7 @@
 # NeuroPrep — Nervous System Midterms 1 & 2
 
+**[Open the single NeuroPrep study hub](https://michaelspear290-stack.github.io/neuroprep-midterm/)** to switch between Midterm 1 (Weeks 1–3) and Midterm 2 (Weeks 4–5) without losing browser-local practice history. Both can be viewed inside the hub's course switcher or opened full-page.
+
 ## Midterm 2 — Weeks 4–5
 
 **[Open the new Midterm 2 practice site](https://michaelspear290-stack.github.io/neuroprep-midterm/midterm2.html)**
@@ -12,7 +14,7 @@ Built directly from the supplied Week 4 and Week 5 lecture notes and the NSCO30 
 - Clinical vignettes, detailed rationale for *every* answer option, key takeaways, hidden hints, choice cross-outs, and A–E shuffling.
 - Light/dark modes, bookmarks, browser-local progress, immediate study feedback, submitted exam review, and separate history storage.
 - Nine anatomy-practical positions use simplified original SVG schematics of the mouth/pharynx, eye, and ear. **They are not a substitute for the faculty's gross-anatomy photographs or lab specimens.**
-- Midterm 1 remains accessible unchanged at the root homepage. The existing dashboard links to Midterm 2.
+- The root homepage is now one unified study hub with Overview, Midterm 1, and Midterm 2 tabs. The original Midterm 1 HTML is preserved unchanged at `midterm1.html`; the two modules use separate progress keys on the same origin. Midterm 2 remains at `midterm2.html` for direct access.
 
 Files: `midterm2.html`, `midterm2-questions.js` (Week 4 + blueprint), `midterm2-week5.js`, and `midterm2-practical.js`. No framework or build tool is required; GitHub Pages serves the static files directly.
 
