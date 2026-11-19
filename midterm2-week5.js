@@ -75,7 +75,7 @@ A(EYE,2,'A patient has accommodation difficulty after parasympathetic injury to 
 'Accommodation uses parasympathetic CN III input through the ciliary ganglion to contract ciliary muscle and round the lens.',
 'Near: ciliary contract → zonules relax → lens rounds.',
 'Think about the lens shape when suspensory ligaments become less taut.');
-A(VF,2,'A pituitary macroadenoma compresses the central portion of the optic chiasm. Which visual field deficit is most characteristic?',
+A(VF,1,'A pituitary macroadenoma compresses the central portion of the optic chiasm. Which visual field deficit is most characteristic?',
 'Bitemporal hemianopia|Left homonymous hemianopia|Right superior quadrantanopia|Binasal hemianopia|Complete monocular blindness of the right eye',
 0,'Crossing nasal retinal fibers carry temporal visual field information from both eyes.|Homonymous loss is produced by retrochiasmal lesions.|Quadrantanopia suggests focal optic radiation or cortical involvement.|Binasal loss is not the classic central-chiasmal pattern.|Monocular blindness is more typical of a prechiasmal optic nerve lesion.',
 'Central chiasmal compression interrupts decussating nasal retinal axons from both eyes, producing loss of the temporal halves of both visual fields.',
@@ -93,7 +93,7 @@ A(VF,2,'A patient has a right homonymous hemianopia with central (macular) visio
 'Macular sparing sometimes accompanies occipital/PCA lesions and has several proposed explanations, including overlapping/collateral blood supply.',
 'Occipital infarct → contralateral homonymous field loss; macular sparing may occur.',
 'Which artery predominantly supplies the primary visual cortex?');
-A(EOM,2,'A patient has vertical diplopia that worsens while descending stairs. On examination the right eye cannot depress normally when adducted. Which cranial nerve is most likely affected?',
+A(EOM,1,'A patient has vertical diplopia that worsens while descending stairs. On examination the right eye cannot depress normally when adducted. Which cranial nerve is most likely affected?',
 'Right trochlear nerve (CN IV)|Right abducens nerve (CN VI)|Left abducens nerve (CN VI)|Right optic nerve (CN II)|Left facial nerve (CN VII)',
 0,'CN IV innervates superior oblique, which contributes to depression of the adducted eye.|CN VI innervates lateral rectus for abduction.|Opposite abducens loss does not selectively impair right downward movement in adduction.|CN II transmits vision, not eye rotation.|CN VII controls facial expression rather than superior oblique.',
 'Superior oblique dysfunction causes vertical/torsional diplopia, often worse with downward gaze on stairs or reading.',
@@ -123,7 +123,7 @@ A(TASTE,1,'A patient undergoes surgery involving chorda tympani and later loses 
 'Taste and general sensory input are separate modalities; CN VII supplies anterior tongue taste whereas V3 supplies general sensation.',
 'Anterior tongue taste = VII; touch = V3; posterior third taste = IX.',
 'Separate general sensation from taste despite their shared peripheral course.');
-A(GL,2,'A 67-year-old develops sudden severe unilateral eye pain, red eye, halos around lights, nausea, and a fixed mid-dilated pupil after taking a medication with antimuscarinic effects. Which process best explains the dangerous rise in intraocular pressure?',
+A(GL,3,'A 67-year-old develops sudden severe unilateral eye pain, red eye, halos around lights, nausea, and a fixed mid-dilated pupil after taking a medication with antimuscarinic effects. Which process best explains the dangerous rise in intraocular pressure?',
 'Closure of the iridocorneal angle blocks trabecular aqueous outflow|Increased drainage through Schlemm canal|Loss of lens accommodation alone|Blockage of central retinal artery without pressure changes|Excess tear production by the lacrimal gland',
 0,'Pupillary dilation can crowd the anterior chamber angle in a predisposed eye and block trabecular drainage.|Improved drainage would lower, not raise, pressure.|Accommodation defects do not explain an acutely painful high-pressure red eye.|Retinal arterial occlusion is a vascular emergency with sudden vision loss, generally without severe high-pressure symptoms.|Lacrimal secretion does not determine intraocular aqueous drainage.',
 'Acute angle-closure glaucoma is an ophthalmic emergency: impaired aqueous outflow rapidly elevates pressure and may damage the optic nerve.',
@@ -147,7 +147,7 @@ A(HEAR,3,'A 42-year-old wakes with marked new unilateral hearing loss over sever
 'Sudden sensorineural hearing loss merits urgent assessment, audiometry, and treatment consideration; distinguish it from conductive causes at the bedside.',
 'Sudden SNHL is an otologic urgency, not a routine follow-up finding.',
 'What is the consequence of delaying care in a potentially reversible acute inner-ear process?');
-A(RET,2,'A person with long-standing diabetes develops retinal neovascularization and vitreous hemorrhage. Which diagnosis and mechanism fit best?',
+A(RET,3,'A person with long-standing diabetes develops retinal neovascularization and vitreous hemorrhage. Which diagnosis and mechanism fit best?',
 'Proliferative diabetic retinopathy driven by ischemia-induced VEGF|Nonproliferative diabetic retinopathy without ischemia|Dry age-related macular degeneration with drusen only|Acute angle-closure glaucoma caused by aqueous buildup|Central retinal artery occlusion caused by a transient embolus alone',
 0,'Ischemic retinal tissue releases VEGF, driving fragile new vessels characteristic of proliferative retinopathy.|NPDR is characterized by microaneurysms, hemorrhages and exudates before neovascular proliferation.|Dry AMD primarily causes drusen/RPE-outer retinal atrophy, not diabetic retinal neovascularization.|Glaucoma involves optic nerve pressure-related injury rather than fragile retinal new vessels.|CRAO causes acute ischemic vision loss, not the chronic neovascular diabetic pattern described.',
 'Retinal hypoxia stimulates VEGF and abnormal new vessels that can bleed; anti-VEGF therapy and panretinal photocoagulation are important treatments.',
