@@ -57,7 +57,7 @@ A(CB,2,'A lesion disconnects the major efferent route from the dentate nucleus t
 'The dentate nucleus sends motor-planning signals through the superior cerebellar peduncle, with decussation to contralateral thalamic and midbrain targets.',
 'Superior peduncle: cerebellar output; middle: pontine input; inferior: many spinal/vestibular inputs.',
 'Which peduncle conveys the dominant output from deep cerebellar nuclei?');
-A(AT,2,'A patient with progressive imbalance sways markedly after closing the eyes while standing feet together. She has impaired vibration and great-toe position sense, but normal finger-to-nose coordination when looking at her hand. Which type of ataxia is most likely?',
+A(AT,3,'A patient with progressive imbalance sways markedly after closing the eyes while standing feet together. She has impaired vibration and great-toe position sense, but normal finger-to-nose coordination when looking at her hand. Which type of ataxia is most likely?',
 'Sensory ataxia|Midline cerebellar ataxia|Vestibular ataxia|Motor cortex weakness|Basal ganglia bradykinesia',
 0,'Loss of conscious proprioception with visual compensation and a positive Romberg favors sensory ataxia.|Vermis lesions usually cause truncal instability even with eyes open.|Vestibular ataxia more often includes vertigo, nystagmus, or lateral veering.|Weakness rather than impaired proprioception dominates motor cortex lesions.|Bradykinesia concerns movement initiation and speed rather than dependence on visual sensory feedback.',
 'Because the patient relies on vision to compensate for loss of proprioception, closing the eyes markedly worsens stance. Dorsal-column/peripheral large-fiber dysfunction is likely.',
