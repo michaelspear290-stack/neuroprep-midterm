@@ -1,3 +1,25 @@
+# NeuroPrep — Nervous System Midterms 1 & 2
+
+## Midterm 2 — Weeks 4–5
+
+**[Open the new Midterm 2 practice site](https://michaelspear290-stack.github.io/neuroprep-midterm/midterm2.html)**
+
+Built directly from the supplied Week 4 and Week 5 lecture notes and the NSCO30 Exam 2 student blueprint:
+
+- **59 independently authored five-option questions:** 50 lecture questions and 9 original schematic anatomy questions, assigned to all 27 blueprint categories in the official proportions.
+- **Full 59-question blueprint simulation** with intended 18 first-order, 27 second-order, and 14 third-order questions. The question-difficulty labels are independent educational estimates, **not faculty-certified cognitive ratings**.
+- **Study mode** (20), **clinical drill** (40), and **selected-topic practice** (20).
+- Clinical vignettes, detailed rationale for *every* answer option, key takeaways, hidden hints, choice cross-outs, and A–E shuffling.
+- Light/dark modes, bookmarks, browser-local progress, immediate study feedback, submitted exam review, and separate history storage.
+- Nine anatomy-practical positions use simplified original SVG schematics of the mouth/pharynx, eye, and ear. **They are not a substitute for the faculty's gross-anatomy photographs or lab specimens.**
+- Midterm 1 remains accessible unchanged at the root homepage. The existing dashboard links to Midterm 2.
+
+Files: `midterm2.html`, `midterm2-questions.js` (Week 4 + blueprint), `midterm2-week5.js`, and `midterm2-practical.js`. No framework or build tool is required; GitHub Pages serves the static files directly.
+
+Questions are student practice aids, not validated or endorsed by faculty, the college, or USMLE. Review with original lecture objectives. The 59-item bank is one authored item per blueprint position, not a bank of hundreds of independent Midterm 2 items; new attempts randomize item and answer order rather than guaranteeing unseen stems.
+
+---
+
 # NeuroPrep — Nervous System Midterm 1
 
 Interactive medical-school practice website aligned with the University of Arizona Week 1–3 nervous system learning objectives and supplied faculty exam blueprint.
