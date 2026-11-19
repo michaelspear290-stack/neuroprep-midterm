@@ -966,6 +966,13 @@
       b.dataset.np='hard40';b.textContent='🧠 Start 40 hard clinical cases';
       cta.appendChild(b);
     }
+    if(cta&&!cta.querySelector('#np2-open')){
+      const a=document.createElement('a');
+      a.id='np2-open';a.href='./midterm2.html';a.className='btn';
+      a.textContent='🧠 Midterm 2 · Weeks 4–5 (59 questions)';
+      a.title='Open the separate Midterm 2 practice bank and exam simulation';
+      cta.appendChild(a);
+    }
     const card=app.querySelector('.question-card');
     if(card&&!card.querySelector('.np-quality-tag')){
       const num=Number(card.querySelector('.q-num')?.textContent.match(/\d+/)?.[0]);
