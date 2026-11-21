@@ -28,6 +28,7 @@ window.NP2_PROF_ADD=function(topicCode,answer,wrong,stems,explanation,takeaway,v
   const level=[1,2,2,3][i];
   window.NP2_ADD(topic,level,stem,answers.join('|'),0,why.join('|'),explanation,takeaway,
    'Localize the mechanism and compare the prediction with each competing option.',visual||null);
+  const latest=window.NP2_BANK[window.NP2_BANK.length-1];latest.profStyle=true;
  }
  stats.concepts++;
  stats.items+=4;
