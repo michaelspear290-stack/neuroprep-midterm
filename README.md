@@ -4,7 +4,7 @@
 
 ## November 20, 2026 — Midterm 2 practice upgrade
 
-- **225 individually authored five-answer Midterm 2 questions**, covering all **27 Exam 2 blueprint sessions** using Weeks 4–5 lecture learning objectives, including 21 more anatomy questions across the same original schematic regions (225 total bank; figures remain simplified schematics, not lab specimens).
+- **225 individually authored five-answer Midterm 2 questions**, covering all **27 Exam 2 blueprint sessions** using Weeks 4–5 lecture learning objectives, including 21 anatomy questions total (nine original plus twelve additional) across the same simplified schematic regions; figures are not lab specimens.
 - **True Study Mode:** select an answer, click **Check Answer**, and immediately receive the correct mechanism, separate explanations for **all five options**, a high-yield takeaway and topic-aligned learning-objective focus. Answer choices can be crossed out, flagged, bookmarked, and revisited.
 - **Test Mode:** choose 10, 20, 40, 59 or 100 questions, select subjects and difficulty (all/second+third/third only), optionally use a time limit, and see answers **only after submission**.
 - **Official 59-question Blueprint Test:** maintains exactly the faculty topic counts, nine practical positions and an 18/27/14 first-/second-/third-order **practice difficulty distribution**. Each session samples available variants of the same topic and estimated difficulty while preferentially using items you have seen less often; no faculty endorsement or psychometric validation is claimed.
