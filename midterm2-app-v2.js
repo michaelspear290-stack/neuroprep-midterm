@@ -144,10 +144,10 @@ const prop=n.dataset.setting;if(prop){let value=n.type==='checkbox'?n.checked:n.
 document.getElementById('theme')?.addEventListener('click',()=>{state.theme=state.theme==='light'?'dark':'light';document.body.classList.toggle('light',state.theme==='light');store()});
 document.body.classList.toggle('light',state.theme==='light');
 document.querySelector('.brand')?.addEventListener('click',e=>{e.preventDefault();logoClicks++;clearTimeout(logoTimer);logoTimer=setTimeout(()=>logoClicks=0,2200);if(logoClicks>=5){logoClicks=0;funModal('brain')}});
-document.addEventListener('click',e=>{if(e.target.id==='np-fun-modal')e.target.remove()});
+document.addEventListener('click',e=>{if(e.target.id==='np-fun-modal'||e.target.closest?.('[data-action="close-modal"]'))document.getElementById('np-fun-modal')?.remove()});
 document.addEventListener('keydown',e=>{if(e.target.closest('input,textarea,select'))return;const ke=e.key.toLowerCase();if(ke.length===1){keys=(keys+ke).slice(-12);if(keys.endsWith('dopa')){keys='';funModal('dopa')}}konami.push(e.key);if(konami.length>10)konami.shift();if(konami.join(',')==='ArrowUp,ArrowUp,ArrowDown,ArrowDown,ArrowLeft,ArrowRight,ArrowLeft,ArrowRight,b,a'){konami=[];award('legend','NeuroLegend');funModal('konami')}
 const a=state.active;if(!a||a.finished||document.getElementById('np-fun-modal'))return;
-const m=/^[1-5]$/.exec(e.key);if(m){const i=a.items[a.index].order[Number(m[0])-1];if(e.shiftKey)strike(i);else markChoice(i);e.preventDefault();return}
+const d=e.shiftKey&&/^Digit[1-5]$/.test(e.code)?e.code.slice(-1):e.key;const m=/^[1-5]$/.exec(d);if(m){const i=a.items[a.index].order[Number(m[0])-1];if(e.shiftKey)strike(i);else markChoice(i);e.preventDefault();return}
 if(e.key==='ArrowRight'&&a.index<a.items.length-1){a.index++;store();quiz()}
 if(e.key==='ArrowLeft'&&a.index>0){a.index--;store();quiz()}});
 setInterval(()=>{const a=state.active;if(!a||a.finished)return;const el=document.getElementById('quiz-clock');if(el)el.textContent=timeText(a);if(a.timed&&a.minutes&&Date.now()-(a.startedAt||a.started)>=a.minutes*60000){toast('Time has expired. Your test was submitted.');finish(true)}},1000);
