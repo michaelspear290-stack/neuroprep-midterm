@@ -2,14 +2,29 @@
 
 **[Open the single NeuroPrep study hub](https://michaelspear290-stack.github.io/neuroprep-midterm/)** to switch between Midterm 1 (Weeks 1–3) and Midterm 2 (Weeks 4–5) without losing browser-local practice history. Both can be viewed inside the hub's course switcher or opened full-page.
 
+## November 20, 2026 — Midterm 2 practice upgrade
+
+- **225 individually authored five-answer Midterm 2 questions**, covering all **27 Exam 2 blueprint sessions** using Weeks 4–5 lecture learning objectives, including 21 more anatomy questions across the same original schematic regions (225 total bank; figures remain simplified schematics, not lab specimens).
+- **True Study Mode:** select an answer, click **Check Answer**, and immediately receive the correct mechanism, separate explanations for **all five options**, a high-yield takeaway and topic-aligned learning-objective focus. Answer choices can be crossed out, flagged, bookmarked, and revisited.
+- **Test Mode:** choose 10, 20, 40, 59 or 100 questions, select subjects and difficulty (all/second+third/third only), optionally use a time limit, and see answers **only after submission**.
+- **Official 59-question Blueprint Test:** maintains exactly the faculty topic counts, nine practical positions and an 18/27/14 first-/second-/third-order **practice difficulty distribution**. Each session samples available variants of the same topic and estimated difficulty while preferentially using items you have seen less often; no faculty endorsement or psychometric validation is claimed.
+- **27-topic filter** grouped into movement, hearing/vestibular, eye/visual, and anatomy. Includes Week 4, Week 5, visual system and anatomy quick-select filters; unseen-only practice and a study-missed review workflow.
+- New dashboard with XP, streak awards, per-topic performance, **Neuro Sprint** challenge mode, keyboard shortcuts, subtle confetti and hidden **brain-click, DOPA, and Konami** Easter eggs.
+- Prior Midterm 2 sessions saved under `neuroprep-midterm2-v1` remain accessible, and the unchanged Midterm 1 HTML/question bank is still available in the unified hub.
+- **Honest scope:** questions are independent medical-school-style practice vignettes. Not every item has been faculty-validated, and some related scenarios revisit the same underlying concept. The bank does not replace reviewing the original lectures or anatomy specimens.
+
+Midterm 2 page files: `midterm2.html`, `midterm2-questions.js`, `midterm2-week5.js`, `midterm2-practical.js`, `midterm2-extra-motor.js`, `midterm2-extra-motor2.js`, `midterm2-extra-auditory.js`, `midterm2-extra-vision.js`, `midterm2-extra-clinical.js`, `midterm2-app-v2.js`, and `midterm2-v2.css`.
+
+---
+
 ## Midterm 2 — Weeks 4–5
 
 **[Open the new Midterm 2 practice site](https://michaelspear290-stack.github.io/neuroprep-midterm/midterm2.html)**
 
 Built directly from the supplied Week 4 and Week 5 lecture notes and the NSCO30 Exam 2 student blueprint:
 
-- **59 independently authored five-option questions:** 50 lecture questions and 9 original schematic anatomy questions, assigned to all 27 blueprint categories in the official proportions.
-- **Full 59-question blueprint simulation** with intended 18 first-order, 27 second-order, and 14 third-order questions. The question-difficulty labels are independent educational estimates, **not faculty-certified cognitive ratings**.
+- **225 independently authored five-option questions:** 204 lecture-topic questions and 21 anatomy practical questions, distributed across 27 blueprint categories., assigned to all 27 blueprint categories in the official proportions.
+- **Full 59-question blueprint simulation** retaining 18 first-order, 27 second-order, and 14 third-order practice labels. The question-difficulty labels are independent educational estimates, **not faculty-certified cognitive ratings**.
 - **Study mode** (20), **clinical drill** (40), and **selected-topic practice** (20).
 - Clinical vignettes, detailed rationale for *every* answer option, key takeaways, hidden hints, choice cross-outs, and A–E shuffling.
 - Light/dark modes, bookmarks, browser-local progress, immediate study feedback, submitted exam review, and separate history storage.
@@ -18,7 +33,7 @@ Built directly from the supplied Week 4 and Week 5 lecture notes and the NSCO30 
 
 Files: `midterm2.html`, `midterm2-questions.js` (Week 4 + blueprint), `midterm2-week5.js`, and `midterm2-practical.js`. No framework or build tool is required; GitHub Pages serves the static files directly.
 
-Questions are student practice aids, not validated or endorsed by faculty, the college, or USMLE. Review with original lecture objectives. The 59-item bank is one authored item per blueprint position, not a bank of hundreds of independent Midterm 2 items; new attempts randomize item and answer order rather than guaranteeing unseen stems.
+Questions are student practice aids, not validated or endorsed by faculty, the college, or USMLE. Review with original lecture objectives. The expanded 225-item bank includes multiple unique questions per blueprint category, with some closely related concepts, not a bank of hundreds of independent Midterm 2 items; new attempts randomize item and answer order rather than guaranteeing unseen stems.
 
 ---
 
