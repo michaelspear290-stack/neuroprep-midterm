@@ -2,9 +2,21 @@
 
 **[Open the single NeuroPrep study hub](https://michaelspear290-stack.github.io/neuroprep-midterm/)** to switch between Midterm 1 (Weeks 1–3) and Midterm 2 (Weeks 4–5) without losing browser-local practice history. Both can be viewed inside the hub's course switcher or opened full-page.
 
+## Professor-practice-style expansion — November 21, 2026
+
+- **400 new, originally written questions** inspired by the *format and scope* of the user-supplied 55-question "Nervous System Practice Test 2" PDF (without reproducing its questions, figures, or answer key). **Midterm 2 now totals 625** unique question stems (225 prior + 400 additions).
+- Additional questions are spread through **all 27 official Week 4–5 blueprint categories**, proportionally emphasizing the higher-weight lectures. New additions include 60 anatomy-practical questions linked to original schematic figures, plus questions about cerebellar circuits, basal ganglia D1/D2, cranial nerves, audiology, vestibular conditions, visual fields, ocular disorders, NMJ conditions, and medication mechanisms.
+- Each of 100 focused learning-objective concepts has four distinct case framings; this deliberately offers multiple approaches to the **same underlying mechanism**, so the 400 questions are **not 400 unrelated concepts**. Every question includes five options, a separate explanation for each option, an underlying mechanism, a key takeaway, and an estimated cognitive level.
+- A **"Professor-practice style only (400 new questions)"** checkbox in the custom Study/Test settings filters sessions to the additions. Full 59-question blueprint simulations still pull from the complete bank and preserve the original topic allocations and 18/27/14 cognitive target. This is an independent *approximation*, not a prediction of the instructor's actual exam questions.
+- New original fundus-style **diagram** added in addition to existing simplified oral, eyeball, and ear schematics. None of the professor's original clinical images or exam questions were published on the public GitHub repository. **Review the provided faculty MRI, fundus and dissection images separately**, because schematic recognition is not equivalent to identifying real anatomy.
+
+New files: `midterm2-prof-helper.js`, `midterm2-prof-motor-a.js`, `midterm2-prof-motor-b.js`, `midterm2-prof-auditory.js`, `midterm2-prof-visual-a.js`, `midterm2-prof-visual-b.js`, `midterm2-prof-anatomy.js`.
+
+---
+
 ## November 20, 2026 — Midterm 2 practice upgrade
 
-- **225 individually authored five-answer Midterm 2 questions**, covering all **27 Exam 2 blueprint sessions** using Weeks 4–5 lecture learning objectives, including 21 anatomy questions total (nine original plus twelve additional) across the same simplified schematic regions; figures are not lab specimens.
+- **225 original plus 400 professor-practice-style five-answer Midterm 2 questions**, covering all **27 Exam 2 blueprint sessions** using Weeks 4–5 lecture learning objectives, including 21 anatomy questions total (nine original plus twelve additional) across the same simplified schematic regions; figures are not lab specimens.
 - **True Study Mode:** select an answer, click **Check Answer**, and immediately receive the correct mechanism, separate explanations for **all five options**, a high-yield takeaway and topic-aligned learning-objective focus. Answer choices can be crossed out, flagged, bookmarked, and revisited.
 - **Test Mode:** choose 10, 20, 40, 59 or 100 questions, select subjects and difficulty (all/second+third/third only), optionally use a time limit, and see answers **only after submission**.
 - **Official 59-question Blueprint Test:** maintains exactly the faculty topic counts, nine practical positions and an 18/27/14 first-/second-/third-order **practice difficulty distribution**. Each session samples available variants of the same topic and estimated difficulty while preferentially using items you have seen less often; no faculty endorsement or psychometric validation is claimed.
